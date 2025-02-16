@@ -39,3 +39,12 @@ pip install https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_sparse-0.6.18%2Bp
 pip install https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_spline_conv-1.2.2%2Bpt21cu118-cp310-cp310-win_amd64.whl
 pip install torch-geometric
 ```
+
+Prepare Datasets(Random 50 times)
+
+run run_gen_fold.sh in data
+
+To train models for cross-validation, please follow the following steps:
+
+Run run_main.sh and run_result_compare.sh in MGC2ATDA.
+For other methods mentioned in the paper, run run_main.sh and run_result_compare.sh in ETGPDA, iPiDA-GCN, iPiDA-SWGCN, iPiDA-GBNN, piRDA folder.
