@@ -1,26 +1,30 @@
-```markdown
 # MGC2ATDA
+
+## Overview
+
+The **MGC2ATDA** project provides tools and methodologies for [Prediction of the Association between Transfer RNA and Diseases: A Deep Learning Approach Combining Multi-View Graph Convolution and Attention Mechanisms]. This repository contains the necessary setup instructions and dependencies to get started on your journey with MGC2ATDA.
 
 ## Getting Started
 
-This repository provides the setup instructions and required dependencies to get started with the **MGC2ATDA** project. The following steps will guide you through creating the appropriate environment and installing all necessary libraries.
+Follow the steps below to create the appropriate environment, install required libraries, and prepare datasets for analysis.
+
+### Prerequisites
+
+Ensure you have [Anaconda](https://www.anaconda.com/products/distribution) installed on your system.
 
 ## Installation
 
-### 1. Setup Conda Environment
+### Step 1: Set up the Conda Environment
 
-To begin, you need to create a Conda environment and activate it:
+To begin, create and activate a new Conda environment for the project:
 
-```bash
-conda create -n MGC2ATDA python=3.10 -y
-conda activate MGC2ATDA
+ 
+conda create -n MGC2ATDA python=3.10 -y conda activate MGC2ATDA
+### Step 2: Install Required Packages
+
+With your environment activated, install the necessary Python packages using the following `pip` commands:
+
 ```
-
-### 2. Install Required Packages
-
-Once the environment is activated, install the required Python packages using the following `pip` commands:
-
-```bash
 pip install numpy==1.25.0
 pip install scipy==1.11.1
 pip install pandas==1.5.3
@@ -38,13 +42,31 @@ pip install https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_scatter-2.1.2%2Bp
 pip install https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_sparse-0.6.18%2Bpt21cu118-cp310-cp310-win_amd64.whl
 pip install https://data.pyg.org/whl/torch-2.1.0%2Bcu118/torch_spline_conv-1.2.2%2Bpt21cu118-cp310-cp310-win_amd64.whl
 pip install torch-geometric
+
 ```
+### Step 3: Prepare Datasets
 
-Prepare Datasets(Random 50 times)
+To prepare datasets for analysis, run the following command:
 
-run run_gen_fold.sh in data
+ 
+bash run_gen_fold.sh
+### Step 4: Train Models for Cross-Validation
 
-To train models for cross-validation, please follow the following steps:
+To train models using cross-validation, run the main training and result comparison scripts in the MGC2ATDA:
 
-Run run_main.sh and run_result_compare.sh in MGC2ATDA.
-For other methods mentioned in the paper, run run_main.sh and run_result_compare.sh in ETGPDA, iPiDA-GCN, iPiDA-SWGCN, iPiDA-GBNN, piRDA folder.
+ 
+bash run_main.sh bash run_result_compare.sh
+### Step 5: Additional Methods
+
+For training and evaluating additional methods discussed in the associated paper, run the respective scripts in the following folders:
+
+- **ETGPDA**
+- **iPiDA-GCN**
+- **iPiDA-SWGCN**
+- **iPiDA-GBNN**
+- **piRDA**
+
+Run the commands for each method:
+
+ 
+bash run_main.sh bash run_result_compare.sh
